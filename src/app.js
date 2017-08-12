@@ -5,7 +5,9 @@
  */
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, Linking } from 'react-native';
+
+const kitten1 = require('./img/kitten_1.png');
 
 const styles = StyleSheet.create({
   container: {
@@ -19,28 +21,31 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
 });
 
-export class kittenDemo extends Component {
+class kittenDemo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: 'Welcome to the Kitten App!',
+    };
+  }
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to the Kitten App!
+          {this.state.title}
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Awesome life of a kitten {'\n'}
-          Shake it and he wont like it.
+        <Image source={kitten1} />
+        <Text
+          style={{ color: 'blue' }}
+          onPress={() => Linking.openURL('http://placekitten.com/attribution.html')}>
+          Images from PlaceKitten
         </Text>
       </View>
     );
   }
 }
+
+
+module.exports.kittenDemo = kittenDemo;
