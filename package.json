@@ -3,7 +3,9 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"build-android": "cd android && ./gradlew assembleRelease",
 		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"log": "node node_modules/react-native/local-cli/cli.js log-android",
 		"test": "jest"
 	},
 	"dependencies": {
