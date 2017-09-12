@@ -17,15 +17,15 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
   },
   coreSection: {
     flex: 8,
-    backgroundColor: 'grey',
+    // backgroundColor: 'grey',
   },
   bottomSection: {
     flex: 0.5,
-    backgroundColor: 'pink',
+    // backgroundColor: 'pink',
   },
 });
 

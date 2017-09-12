@@ -40,7 +40,7 @@ class kittenDemo extends Component {
           <Text style={styles.welcome}>
             {this.state.title}
           </Text>
-          <Text>{this.state.wftjs}</Text>
+          {/* <Text>{this.state.wftjs}</Text> */}
         </View>
         <View style={styles.coreSection}>
           <Slider
